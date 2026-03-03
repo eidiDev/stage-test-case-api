@@ -125,10 +125,15 @@ Relacionamentos:
 ### Processos
 - `{POST} /process`
 - `{GET} /process`
+- `{GET} /process/:uuid/tree`
 - `{GET} /process/:uuid`
 - `{PATCH} /process/:uuid`
 - `{PUT} /process/:uuid`
 - `{DELETE} /process/:uuid`
+
+### Dashboard
+- `{GET} /dashboard/overview`
+
 
 ---
 
@@ -168,12 +173,24 @@ npm install
 
 Crie um arquivo .env baseado no .env.example e configure as variáveis de ambiente:
 
-DATABASE_HOST=
-DATABASE_PORT=
-DATABASE_USERNAME=
-DATABASE_PASSWORD=
-DATABASE_NAME=
+#SERVER
+HOST=
+PORT=
+MODE=
+NODE_ENV=
+SITE_URL=
+#DATABASE
+DB_TYPE=
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PASSWORD=
+DB_DATABASE=
+DB_SYNC=
+DB_SSL=
+#Auth
 JWT_SECRET=
+
 
 ▶️ Executando a Aplicação
 
@@ -185,6 +202,7 @@ Modo produção:
 
 npm run build
 npm run start:prod
+
 🗄️ Migrations
 
 Gerar migration:
@@ -194,7 +212,10 @@ npm run migration:generate
 Rodar migration:
 
 npm run migration:run
-📊 Status do Projeto
+
+```
+
+## 📊 Status do Projeto
 
 ✔ CRUD completo
 
@@ -206,7 +227,9 @@ npm run migration:run
 
 ❌ Ainda não possui deploy
 
-👨‍💻 Autor
+❌ Ainda não testes automatizados
+
+## 👨‍💻 Autor
 
 Lucas Eidi
 📧 lucaseidikumagai@gmail.com
